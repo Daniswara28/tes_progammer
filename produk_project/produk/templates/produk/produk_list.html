@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Produk</title>
+</head>
+<body>
+    <h1>Daftar Produk</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Kategori</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in produk %}
+            <tr>
+                <td>{{ item.nama_produk }}</td>
+                <td>{{ item.harga }}</td>
+                <td>{{ item.kategori.nama_kategori }}</td>
+                <td>{{ item.status.nama_status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
